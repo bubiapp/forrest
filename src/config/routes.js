@@ -4,12 +4,33 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import ROUTES from '../constants/routeNames';
 
-import Index from '../index';
+import BeginRun from '../screens/beginRun.screen';
+import History from '../screens/history.screen';
+import Home from '../screens/Home/home.screen';
+import Running from '../screens/running.screen';
 
 const AppNavigator = createStackNavigator(
   {
     [ROUTES.SCREENS.MAIN]: {
-      screen: Index,
+      screen: Home,
+      navigationOptions: {
+        header: () => null,
+      },
+    },
+    BeginRun: {
+      screen: BeginRun,
+      navigationOptions: {
+        header: () => null,
+      },
+    },
+    History: {
+      screen: History,
+      navigationOptions: {
+        header: () => null,
+      },
+    },
+    Running: {
+      screen: Running,
       navigationOptions: {
         header: () => null,
       },
