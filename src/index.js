@@ -23,6 +23,16 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+// eslint-disable-next-line import/default
+import RNBlockstackSdk from 'react-native-blockstack';
+
+const test = async () => {
+  console.log('RNBlockstackSdk :', RNBlockstackSdk);
+  const result = await RNBlockstackSdk.hasSession();
+  console.log('result :', result);
+};
+
+test();
 
 const App = () => {
   return (
